@@ -146,7 +146,10 @@ namespace RealtimeMesh
 			RuntimeResourceID = NullResources.RuntimeResourceID;
 			HierarchyOffset = NullResources.HierarchyOffset;
 			RootPageIndex = NullResources.RootPageIndex;
+#if RMC_ENGINE_BELOW_5_8
+			// ImposterIndex was removed from Nanite::FResources in UE 5.8
 			ImposterIndex = NullResources.ImposterIndex;
+#endif
 			NumHierarchyNodes = NullResources.NumHierarchyNodes;
 			NumResidentClusters = NullResources.NumResidentClusters;
 			PersistentHash = NullResources.PersistentHash;

@@ -63,7 +63,10 @@ namespace RealtimeMesh
 		BatchElement.InstancedLODIndex = 0;
 		BatchElement.InstancedLODRange = 0;
 		BatchElement.bUserDataIsColorVertexBuffer = false;
+#if RMC_ENGINE_BELOW_5_8
+		// bIsSplineProxy was removed from FMeshBatchElement in UE 5.8
 		BatchElement.bIsSplineProxy = false;
+#endif
 		BatchElement.bIsInstanceRuns = false;
 		BatchElement.bForceInstanceCulling = false;
 		BatchElement.bPreserveInstanceOrder = false;
